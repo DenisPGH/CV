@@ -35,6 +35,20 @@ div.con{
     width: 50%;
 
 }
+div.main{
+    display: flex;
+    flex-direction: row;
+}
+div.left{
+    text-align: center;
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #1b4106;
+    width: 24%;
+
+
+}
 div div.contact{
     border-radius: 20px;
     border-style: dashed;
