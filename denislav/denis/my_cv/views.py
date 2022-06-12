@@ -38,3 +38,8 @@ def de_mode(request):
     deni.mode = False
     deni.save()
     return redirect('index')
+
+
+"""
+chrome://flags/ into chrom change dark mode
+"""

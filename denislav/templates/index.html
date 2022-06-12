@@ -18,6 +18,10 @@
         </form>
 </header>
 
+<div class="con">
+
+
+
 <div>
     {% if mode %}
         <p2> EN</p2>
@@ -27,12 +31,12 @@
 </div>
 <div class="contact">
     <p1> CONTACT:</p1>
-    <p2> First name: {{ denislav.first_name }} </p2>
-    <p2> Last name: {{ denislav.last_name }} </p2>
-    <p2> GitHub: <a href="{{ contact.git_hub }}">{{ contact.git_hub }}</a></p2>
-    <p2> LinkedIn: <a href="{{ contact.linked_in }}">{{ contact.linked_in }}</a> </p2>
-    <p2> Phone: {{ contact.phone }} </p2>
-    <p2> Email: {{ contact.email }} </p2>
+    <span><p2 class="bbb"> First name: </p2><p2> {{ denislav.first_name }} </p2></span>
+    <span><p2 class="bbb"> Last name: </p2><p2>{{ denislav.last_name }} </p2></span>
+    <span><p2 class="bbb"> GitHub: </p2><p2><a href="{{ contact.git_hub }}">{{ contact.git_hub }}</a></p2></span>
+    <span><p2 class="bbb"> LinkedIn:  </p2><p2>  <a href="{{ contact.linked_in }}">{{ contact.linked_in }}</a> </p2></span>
+    <span><p2 class="bbb"> Phone: </p2><p2>{{ contact.phone }} </p2></span>
+    <span><p2 class="bbb"> Email:  </p2><p2> {{ contact.email }} </p2></span>
 </div>
 
 <div class="about_me">
@@ -40,17 +44,18 @@
 
     {% if mode %}
         <p1> ABOUT ME:</p1>
-        <p2> "{{ denislav.about_me_en }}"</p2>
-        <p2> Skills-first: {{ denislav.skills_first_en }} </p2>
-        <p2> Skills-second: {{ denislav.skills_second_en }} </p2>
+        <p2 class="me"> "{{ denislav.about_me_en }}"</p2>
+        <span><p2 class="bbb"> Skills-first: </p2><p2> {{ denislav.skills_first_en }} </p2></span>
+        <span><p2 class="bbb"> Skills-second:  </p2><p2>{{ denislav.skills_second_en }}</p2></span>
         <p2> Skills-third: {{ denislav.skills_third_en }} </p2>
 
     {% else %}
         <p1>  FÜR MICH:</p1>
-        <p2> "{{ denislav.about_me_de }}"</p2>
-        <p2> Kenntnisse-erste: {{ denislav.skills_first_de }}</p2>
-        <p2> Kenntnisse-zweite: {{ denislav.skills_second_de }}</p2>
-        <p2> Kenntnisse-dritte: {{ denislav.skills_third_de }}</p2>
+        <p2 class="me"> "{{ denislav.about_me_de }}"</p2>
+        <span><p2 class="bbb"> Kenntnisse-erste: </p2><p2>{{ denislav.skills_first_de }}</p2></span>
+        <span><p2 class="bbb"> Kenntnisse-zweite: </p2><p2>{{ denislav.skills_second_de }}</p2></span>
+        <span><p2 class="bbb"> Kenntnisse-dritte: </p2><p2>{{ denislav.skills_third_de }}</p2></span>
+
     {% endif %}
 </div>
 
@@ -179,6 +184,9 @@
     {% endif %}
 </div>
 
-
+</div>
+<footer>
+    <p2> &copy; 2022 All rights reserved Denislav Petrov </p2>
+</footer>
 </body>
 </html>

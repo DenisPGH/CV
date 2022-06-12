@@ -2,6 +2,9 @@
 header{
     display: flex;
     flex-direction: row;
+    text-align: right;
+    margin-left: 35rem;
+
 }
 a:link {
             text-decoration: none;
@@ -19,15 +22,27 @@ body{
     text-align: left;
 
 }
-div{
+div.con{
+    border-style: dashed;
     padding-top: 20px;
+    border-width: 5px;
+    border-color: black;
+    width: 50%;
 }
-div.contact{
+div div.contact{
+    border-style: dashed;
+    padding-top: 3px;
+    border-width: 3px;
+    border-color: green;
     display: flex;
     flex-direction: column;
 }
 
 div.about_me{
+    border-style: dashed;
+    padding-top: 3px;
+    border-width: 3px;
+    border-color: green;
     display: flex;
     flex-direction: column;
 }
@@ -39,11 +54,46 @@ div.certificate{
 }
 
 div.project{
+    border-style: dashed;
+    padding-top: 3px;
+    border-width: 3px;
+    border-color: green;
     display: flex;
     flex-direction: column;
 }
 
 div.work{
+    border-style: dashed;
+    padding-top: 3px;
+    border-width: 3px;
+    border-color: green;
     display: flex;
     flex-direction: column;
+}
+
+.con{
+    background: white;
+    border-radius: 20px;
+    margin-left: 18rem;
+
+}
+div p2.me{
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
+    background: #29e129;
+}
+
+.bbb{
+    /*background: blue;*/
+     font-weight: bold;
+}
+button{
+
+    border-radius: 5px;
+    background: green;
+}
+
+footer{
+    text-align: center;
 }
