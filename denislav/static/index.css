@@ -3,9 +3,20 @@ header{
     display: flex;
     flex-direction: row;
 }
+a:link {
+            text-decoration: none;
+            /*color: white;*/
+        }
+
+body div p1{
+
+
+    color: blue;
+}
 
 body{
     background: greenyellow;
+    text-align: left;
 
 }
 div{
@@ -22,11 +33,17 @@ div.about_me{
 }
 
 div.certificate{
+
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+
+div.project{
     display: flex;
     flex-direction: column;
 }
 
-div.project{
+div.work{
     display: flex;
     flex-direction: column;
 }

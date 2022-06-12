@@ -29,8 +29,8 @@
     <p1> CONTACT:</p1>
     <p2> First name: {{ denislav.first_name }} </p2>
     <p2> Last name: {{ denislav.last_name }} </p2>
-    <p2> GitHub: {{ contact.git_hub }} </p2>
-    <p2> LinkedIn: {{ contact.linked_in }} </p2>
+    <p2> GitHub: <a href="{{ contact.git_hub }}">{{ contact.git_hub }}</a></p2>
+    <p2> LinkedIn: <a href="{{ contact.linked_in }}">{{ contact.linked_in }}</a> </p2>
     <p2> Phone: {{ contact.phone }} </p2>
     <p2> Email: {{ contact.email }} </p2>
 </div>
@@ -54,7 +54,7 @@
     {% endif %}
 </div>
 
-<div class="language">
+<div class="certificate">
 
     {% if mode %}
         <p1> LANGUAGES:</p1>
@@ -94,7 +94,7 @@
 
 </div>
 
-<div class="certificate">
+<div class="language">
     {% if mode %}
         <p1> CERTIFICATIONS:</p1>
         <table>
@@ -111,10 +111,9 @@
     {% else %}
         <p1> ZEUGNISSE:</p1>
            <table>
-    <tr>
-        <th>Zeugnis</th>
-
-    </tr>
+            <tr>
+                <th>Zeugnis</th>
+            </tr>
     {%  for each in certificats %}
         <tr>
             <th>{{ each.name_de }}</th>
@@ -146,9 +145,34 @@
             <p3> Name: {{ each.title_de }}</p3>
             <p3> FOR - BIS : {{ each.duration_de }}</p3>
             <p3> Beschreibung: {{ each.description_de }}</p3>
-            <p3> Used: {{ each.used }}</p3>
+            <p3> Benutzt: {{ each.used }}</p3>
             <p3> Link: {{ each.link }}</p3>
             <p3> Demo: {{ each.demo }}</p3>
+            <p3> =========================</p3>
+        {% endfor %}
+
+    {% endif %}
+</div>
+
+
+<div class="work">
+    {% if mode %}
+        <p1> WORK EXPERIENCE:</p1>
+        {%  for each in works %}
+            <p3> Position: {{ each.position_en }}</p3>
+            <p3> FROM - TO: {{ each.from_date }} - {{ each.to_date }}</p3>
+            <p3> Description: {{ each.description_en }}</p3>
+            <p3> Employer: {{ each.employer_en }}</p3>
+            <p3> =========================</p3>
+        {% endfor %}
+
+    {% else %}
+        <p1> ARBEITSERFAHRUNG:</p1>
+         {%  for each in work %}
+            <p3> Beruf oder Funktion: {{ each.position_de }}</p3>
+            <p3> Datum (von-bis) : {{ each.from_date }} - {{ each.to_date }}</p3>
+            <p3> Beschreibung: {{ each.description_de }}</p3>
+            <p3> Arbeitgeber: {{ each.employer_de }}</p3>
             <p3> =========================</p3>
         {% endfor %}
 
