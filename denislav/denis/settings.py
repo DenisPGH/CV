@@ -85,7 +85,7 @@ DATABASES = {
         'PORT': '5432' ,
         'NAME': os.getenv('DB_NAME','roboweb_db') ,
         'USER': os.getenv('DB_USER','denis_postgre') ,
-        'PASSWORD': os.getenv('DB_PASSWORD','Deni'),
+        'PASSWORD': os.getenv('DB_PASSWORD','D_12-K9'),
             },
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',

@@ -29,6 +29,12 @@ class ContactData(models.Model):
 
 
 class Denislav(models.Model):
+    NAME_MAX_LENGHT=40
+    first_name=models.CharField(max_length=NAME_MAX_LENGHT, null=True)
+    last_name=models.CharField(max_length=NAME_MAX_LENGHT, null=True)
+    mode=models.BooleanField( # if true is English, if False is Deutsch
+        default=True
+    )
     about_me_en=models.TextField()
     skills_first_en=models.TextField()
     skills_second_en=models.TextField()
@@ -58,3 +64,18 @@ class Project(models.Model):
     description_de = models.TextField()
 
 
+class Work(models.Model):
+    DURATION_MAX_LENGHT = 50
+    TITLE_MAX_LENGHT = 50
+    POSITION_MAX_LENGHT = 50
+
+    from_date = models.DateField()
+    to_date = models.DateField()
+
+    position_en=models.CharField(max_length=POSITION_MAX_LENGHT)
+    employer_en = models.CharField(max_length=TITLE_MAX_LENGHT)
+    description_en = models.TextField()
+
+    position_de = models.CharField(max_length=POSITION_MAX_LENGHT)
+    employer_de = models.CharField(max_length=TITLE_MAX_LENGHT)
+    description_de = models.TextField()

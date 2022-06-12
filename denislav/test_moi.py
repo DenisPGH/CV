@@ -28,3 +28,15 @@
     'duration_de',
     'description_de' 
 """
+
+
+"""
+    'from_date' ,
+    'to_date',
+    'position_en',
+    'employer_en',
+    'description_en',
+    'position_de', 
+    'employer_de' ,
+    'description_de' 
+"""

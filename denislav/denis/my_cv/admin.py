@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from denis.my_cv.models import Certificate,Denislav,Language,Project,ContactData
+from denis.my_cv.models import Certificate,Denislav,Language,Project,ContactData,Work
 
 
 @admin.register(Certificate)
@@ -11,6 +11,8 @@ class TaskCertificate(admin.ModelAdmin):
 @admin.register(Denislav)
 class TaskDenislav(admin.ModelAdmin):
     list_display = (
+        'first_name','last_name'
+        'mode',
     'about_me_en',
     'skills_first_en',
     'skills_second_en',
@@ -48,3 +50,16 @@ class TaskProject(admin.ModelAdmin):
     'title_de',
     'duration_de',
     'description_de' )
+
+@admin.register(Work)
+class TaskWork(admin.ModelAdmin):
+    list_display = (
+    'from_date' ,
+    'to_date',
+    'position_en',
+    'employer_en',
+    'description_en',
+    'position_de',
+    'employer_de' ,
+    'description_de'
+    )

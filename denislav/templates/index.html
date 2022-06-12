@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
+<header>
+    <form class="en" action="{% url 'en' %}">
+            <button class="en" >EN</button>
+            {% csrf_token %}
+        </form>
+    <form class="de" action="{% url 'de' %}">
+            <button class="de" >DE</button>
+            {% csrf_token %}
+        </form>
+</header>
+
+<div>
+    {% if mode %}
+        <p2> EN</p2>
+    {% else %}
+        <p3>DE</p3>
+    {% endif %}
+</div>
+<div class="contact">
+    <p1> Contact Data</p1>
+    <p2> First name: {{ contact.git_hub }} </p2>
+    <p2> Last name: {{ contact.git_hub }} </p2>
+    <p2> GitHub: {{ contact.git_hub }} </p2>
+    <p2> LinkedIn: {{ contact.linked_in }} </p2>
+</div>
 
 </body>
 </html>
