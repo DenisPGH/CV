@@ -26,9 +26,9 @@
 
 <div class="top_lan">
     {% if mode %}
-        <p2> English</p2>
+        <p2> Looking for Job with Python</p2>
     {% else %}
-        <p2>Deutsch</p2>
+        <p2>Suche nach einer Arbeit mit Python</p2>
     {% endif %}
 </div>
 <div class="contact">
@@ -144,7 +144,7 @@
             <span><p2 class="bbb"> Used: </p2><p2>{{ each.used }}</p2></span>
             <span><p2 class="bbb"> Link: </p2><p2><a href="{{ each.link }}">{{ each.link }}</a></p2></span>
             <span><p2 class="bbb"> Demo: </p2><p2><a href="{{ each.demo }}">{{ each.demo }}</a></p2></span>
-            <p2 class="line"> =====================================</p2>
+            <p2 class="line"> {{ line }}</p2>
         {% endfor %}
 
     {% else %}
@@ -157,7 +157,7 @@
             <span><p2 class="bbb"> Benutzt: </p2><p2>{{ each.used }}</p2></span>
             <span><p2 class="bbb"> Link: </p2><p2><a href="{{ each.link }}">{{ each.link }}</a></p2></span>
             <span><p2 class="bbb"> Demo: </p2><p2><a href="{{ each.demo }}">{{ each.demo }}</a></p2></span>
-            <p2> ====================================</p2>
+            <p2> {{ line }}</p2>
         {% endfor %}
 
     {% endif %}
@@ -189,10 +189,10 @@
 </div>
 
 </div>
-<div class="left">
-    <span>Something here?!?</span>
-
-</div>
+{#<div class="left">#}
+{#    <span>Something here?!?</span>#}
+{##}
+{#</div>#}
 </div>
 <footer>
     <p2> &copy; 2022 All rights reserved Denislav Petrov </p2>

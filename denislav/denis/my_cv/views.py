@@ -24,6 +24,7 @@ class MainPage(views.TemplateView):
         context['works']=works
         context['denislav']=denislav
         context['mode']=mode
+        context['line']="="*25
         return context
 
 
