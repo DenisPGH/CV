@@ -26,12 +26,135 @@
     {% endif %}
 </div>
 <div class="contact">
-    <p1> Contact Data</p1>
-    <p2> First name: {{ contact.git_hub }} </p2>
-    <p2> Last name: {{ contact.git_hub }} </p2>
+    <p1> CONTACT:</p1>
+    <p2> First name: {{ denislav.first_name }} </p2>
+    <p2> Last name: {{ denislav.last_name }} </p2>
     <p2> GitHub: {{ contact.git_hub }} </p2>
     <p2> LinkedIn: {{ contact.linked_in }} </p2>
+    <p2> Phone: {{ contact.phone }} </p2>
+    <p2> Email: {{ contact.email }} </p2>
 </div>
+
+<div class="about_me">
+
+
+    {% if mode %}
+        <p1> ABOUT ME:</p1>
+        <p2> "{{ denislav.about_me_en }}"</p2>
+        <p2> Skills-first: {{ denislav.skills_first_en }} </p2>
+        <p2> Skills-second: {{ denislav.skills_second_en }} </p2>
+        <p2> Skills-third: {{ denislav.skills_third_en }} </p2>
+
+    {% else %}
+        <p1>  FÜR MICH:</p1>
+        <p2> "{{ denislav.about_me_de }}"</p2>
+        <p2> Kenntnisse-erste: {{ denislav.skills_first_de }}</p2>
+        <p2> Kenntnisse-zweite: {{ denislav.skills_second_de }}</p2>
+        <p2> Kenntnisse-dritte: {{ denislav.skills_third_de }}</p2>
+    {% endif %}
+</div>
+
+<div class="language">
+
+    {% if mode %}
+        <p1> LANGUAGES:</p1>
+        <table>
+    <tr>
+        <th>Language</th>
+        <th>Level</th>
+    </tr>
+    {%  for each in languages %}
+        <tr>
+            <th>{{ each.language_en }}</th>
+            <td>{{ each.level_en}}</td>
+
+        </tr>
+
+    {% endfor %}
+        </table>
+
+    {% else %}
+        <p1> SPRACHEN:</p1>
+           <table>
+    <tr>
+        <th>Sprache</th>
+        <th>Niveau</th>
+    </tr>
+    {%  for each in languages %}
+        <tr>
+            <th>{{ each.language_en }}</th>
+            <td>{{ each.level_en}}</td>
+
+        </tr>
+
+    {% endfor %}
+        </table>
+    {% endif %}
+
+
+</div>
+
+<div class="certificate">
+    {% if mode %}
+        <p1> CERTIFICATIONS:</p1>
+        <table>
+    <tr>
+        <th>Certificate</th>
+
+    </tr>
+    {%  for each in certificats %}
+        <tr>
+            <th>{{ each.name_en }}</th>
+        </tr>
+    {% endfor %}
+        </table>
+    {% else %}
+        <p1> ZEUGNISSE:</p1>
+           <table>
+    <tr>
+        <th>Zeugnis</th>
+
+    </tr>
+    {%  for each in certificats %}
+        <tr>
+            <th>{{ each.name_de }}</th>
+        </tr>
+
+    {% endfor %}
+        </table>
+    {% endif %}
+
+
+</div>
+
+<div class="project">
+    {% if mode %}
+        <p1> PROJECTS:</p1>
+        {%  for each in projects %}
+            <p3> Project name: {{ each.title_en }}</p3>
+            <p3> FROM - TO: {{ each.duration_en }}</p3>
+            <p3> Description: {{ each.description_en }}</p3>
+            <p3> Used: {{ each.used }}</p3>
+            <p3> Link: {{ each.link }}</p3>
+            <p3> Demo: {{ each.demo }}</p3>
+            <p3> =========================</p3>
+        {% endfor %}
+
+    {% else %}
+        <p1> PROJEKTES:</p1>
+         {%  for each in projects %}
+            <p3> Name: {{ each.title_de }}</p3>
+            <p3> FOR - BIS : {{ each.duration_de }}</p3>
+            <p3> Beschreibung: {{ each.description_de }}</p3>
+            <p3> Used: {{ each.used }}</p3>
+            <p3> Link: {{ each.link }}</p3>
+            <p3> Demo: {{ each.demo }}</p3>
+            <p3> =========================</p3>
+        {% endfor %}
+
+    {% endif %}
+</div>
+
 
 </body>
 </html>

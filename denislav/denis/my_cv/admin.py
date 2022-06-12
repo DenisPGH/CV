@@ -11,7 +11,7 @@ class TaskCertificate(admin.ModelAdmin):
 @admin.register(Denislav)
 class TaskDenislav(admin.ModelAdmin):
     list_display = (
-        'first_name','last_name'
+        'first_name','last_name',
         'mode',
     'about_me_en',
     'skills_first_en',

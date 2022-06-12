@@ -6,8 +6,27 @@ header{
 
 body{
     background: greenyellow;
+
+}
+div{
+    padding-top: 20px;
 }
 div.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+div.about_me{
+    display: flex;
+    flex-direction: column;
+}
+
+div.certificate{
+    display: flex;
+    flex-direction: column;
+}
+
+div.project{
     display: flex;
     flex-direction: column;
 }
