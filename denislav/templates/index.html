@@ -22,11 +22,11 @@
 
 
 
-<div>
+<div class="top_lan">
     {% if mode %}
-        <p2> EN</p2>
+        <p2> English</p2>
     {% else %}
-        <p3>DE</p3>
+        <p2>Deutsch</p2>
     {% endif %}
 </div>
 <div class="contact">
@@ -47,7 +47,8 @@
         <p2 class="me"> "{{ denislav.about_me_en }}"</p2>
         <span><p2 class="bbb"> Skills-first: </p2><p2> {{ denislav.skills_first_en }} </p2></span>
         <span><p2 class="bbb"> Skills-second:  </p2><p2>{{ denislav.skills_second_en }}</p2></span>
-        <p2> Skills-third: {{ denislav.skills_third_en }} </p2>
+        <span><p2 class="bbb"> Skills-third:  </p2><p2>{{ denislav.skills_third_en }}</p2></span>
+
 
     {% else %}
         <p1>  FÜR MICH:</p1>
@@ -59,7 +60,7 @@
     {% endif %}
 </div>
 
-<div class="certificate">
+<div class="language">
 
     {% if mode %}
         <p1> LANGUAGES:</p1>
@@ -70,7 +71,7 @@
     </tr>
     {%  for each in languages %}
         <tr>
-            <th>{{ each.language_en }}</th>
+            <td>{{ each.language_en }}</td>
             <td>{{ each.level_en}}</td>
 
         </tr>
@@ -87,7 +88,7 @@
     </tr>
     {%  for each in languages %}
         <tr>
-            <th>{{ each.language_en }}</th>
+            <td>{{ each.language_en }}</td>
             <td>{{ each.level_en}}</td>
 
         </tr>
@@ -99,17 +100,17 @@
 
 </div>
 
-<div class="language">
+<div class="certificate">
     {% if mode %}
         <p1> CERTIFICATIONS:</p1>
         <table>
     <tr>
-        <th>Certificate</th>
+        <th> </th>
 
     </tr>
     {%  for each in certificats %}
         <tr>
-            <th>{{ each.name_en }}</th>
+            <td>{{ each.name_en }}</td>
         </tr>
     {% endfor %}
         </table>
@@ -117,11 +118,11 @@
         <p1> ZEUGNISSE:</p1>
            <table>
             <tr>
-                <th>Zeugnis</th>
+                <th> </th>
             </tr>
     {%  for each in certificats %}
         <tr>
-            <th>{{ each.name_de }}</th>
+            <td>{{ each.name_de }}</td>
         </tr>
 
     {% endfor %}
@@ -135,25 +136,26 @@
     {% if mode %}
         <p1> PROJECTS:</p1>
         {%  for each in projects %}
-            <p3> Project name: {{ each.title_en }}</p3>
-            <p3> FROM - TO: {{ each.duration_en }}</p3>
-            <p3> Description: {{ each.description_en }}</p3>
-            <p3> Used: {{ each.used }}</p3>
-            <p3> Link: {{ each.link }}</p3>
-            <p3> Demo: {{ each.demo }}</p3>
-            <p3> =========================</p3>
+            <span><p2 class="bbb"> Project name: </p2><p2>{{ each.title_en }}</p2></span>
+            <span><p2 class="bbb"> FROM - TO: </p2><p2>{{ each.duration_en }}</p2></span>
+            <span><p2 class="bbb"> Description: </p2><p2>{{ each.description_en }}</p2></span>
+            <span><p2 class="bbb"> Used: </p2><p2>{{ each.used }}</p2></span>
+            <span><p2 class="bbb"> Link: </p2><p2><a href="{{ each.link }}">{{ each.link }}</a></p2></span>
+            <span><p2 class="bbb"> Demo: </p2><p2><a href="{{ each.demo }}">{{ each.demo }}</a></p2></span>
+            <p2 class="line"> =====================================</p2>
         {% endfor %}
 
     {% else %}
         <p1> PROJEKTES:</p1>
          {%  for each in projects %}
-            <p3> Name: {{ each.title_de }}</p3>
-            <p3> FOR - BIS : {{ each.duration_de }}</p3>
-            <p3> Beschreibung: {{ each.description_de }}</p3>
-            <p3> Benutzt: {{ each.used }}</p3>
-            <p3> Link: {{ each.link }}</p3>
-            <p3> Demo: {{ each.demo }}</p3>
-            <p3> =========================</p3>
+
+             <span><p2 class="bbb"> Name: </p2><p2>{{ each.title_de }}</p2></span>
+            <span><p2 class="bbb"> VON - BIS: </p2><p2>{{ each.duration_de }}</p2></span>
+            <span><p2 class="bbb"> Beschreibung: </p2><p2>{{ each.description_de }}</p2></span>
+            <span><p2 class="bbb"> Benutzt: </p2><p2>{{ each.used }}</p2></span>
+            <span><p2 class="bbb"> Link: </p2><p2><a href="{{ each.link }}">{{ each.link }}</a></p2></span>
+            <span><p2 class="bbb"> Demo: </p2><p2><a href="{{ each.demo }}">{{ each.demo }}</a></p2></span>
+            <p2> ====================================</p2>
         {% endfor %}
 
     {% endif %}
@@ -164,20 +166,20 @@
     {% if mode %}
         <p1> WORK EXPERIENCE:</p1>
         {%  for each in works %}
-            <p3> Position: {{ each.position_en }}</p3>
-            <p3> FROM - TO: {{ each.from_date }} - {{ each.to_date }}</p3>
-            <p3> Description: {{ each.description_en }}</p3>
-            <p3> Employer: {{ each.employer_en }}</p3>
+            <span><p2 class="bbb"> Position: </p2><p2>{{ each.position_en }}</p2></span>
+            <span><p2 class="bbb"> FROM - TO: </p2><p2>{{ each.from_date }} - {{ each.to_date }}</p2></span>
+            <span><p2 class="bbb"> Description: </p2><p2>{{ each.description_en }}</p2></span>
+            <span><p2 class="bbb"> Employer: </p2><p2>{{ each.employer_en }}</p2></span>
             <p3> =========================</p3>
         {% endfor %}
 
     {% else %}
         <p1> ARBEITSERFAHRUNG:</p1>
          {%  for each in work %}
-            <p3> Beruf oder Funktion: {{ each.position_de }}</p3>
-            <p3> Datum (von-bis) : {{ each.from_date }} - {{ each.to_date }}</p3>
-            <p3> Beschreibung: {{ each.description_de }}</p3>
-            <p3> Arbeitgeber: {{ each.employer_de }}</p3>
+             <span><p2 class="bbb"> Beruf oder Funktion: </p2><p2>{{ each.position_de }}</p2></span>
+            <span><p2 class="bbb"> Datum (von-bis) : </p2><p2>{{ each.from_date }} - {{ each.to_date }}</p2></span>
+            <span><p2 class="bbb"> Beschreibung:  </p2><p2>{{ each.description_de }}</p2></span>
+            <span><p2 class="bbb"> Arbeitgeber: </p2><p2>{{ each.employer_de }}</p2></span>
             <p3> =========================</p3>
         {% endfor %}
 

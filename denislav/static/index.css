@@ -11,25 +11,32 @@ a:link {
             /*color: white;*/
         }
 
+div.top_lan{
+    text-align: center;
+}
+
 body div p1{
 
-
-    color: blue;
+    font-weight: bold;
+    color: #131312;
+    text-align: center;
 }
 
 body{
     background: greenyellow;
     text-align: left;
+    font-size: 21px;
 
 }
 div.con{
     border-style: dashed;
-    padding-top: 20px;
     border-width: 5px;
-    border-color: black;
+    border-color: #1b4106;
     width: 50%;
+
 }
 div div.contact{
+    border-radius: 20px;
     border-style: dashed;
     padding-top: 3px;
     border-width: 3px;
@@ -39,8 +46,10 @@ div div.contact{
 }
 
 div.about_me{
+
     border-style: dashed;
-    padding-top: 3px;
+    border-radius: 20px;
+    padding-top: 20px;
     border-width: 3px;
     border-color: green;
     display: flex;
@@ -48,14 +57,19 @@ div.about_me{
 }
 
 div.certificate{
-
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
 }
 
 div.project{
+    border-radius: 20px;
     border-style: dashed;
-    padding-top: 3px;
+    padding-top: 20px;
     border-width: 3px;
     border-color: green;
     display: flex;
@@ -63,8 +77,19 @@ div.project{
 }
 
 div.work{
+    border-radius: 20px;
     border-style: dashed;
-    padding-top: 3px;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.language{
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 20px;
     border-width: 3px;
     border-color: green;
     display: flex;
@@ -72,7 +97,7 @@ div.work{
 }
 
 .con{
-    background: white;
+    background: #f1ecec;
     border-radius: 20px;
     margin-left: 18rem;
 
@@ -81,7 +106,7 @@ div p2.me{
     border-radius: 10px;
     border-color: black;
     border-width: 1px;
-    background: #29e129;
+    background: #dae8a2;
 }
 
 .bbb{
@@ -92,8 +117,20 @@ button{
 
     border-radius: 5px;
     background: green;
+    font-size: 25px;
 }
 
 footer{
     text-align: center;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+div{
+    padding-top: 20px;
+}
+div div p1.line{
+    color: black;
 }
