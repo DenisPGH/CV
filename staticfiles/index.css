@@ -1,0 +1,151 @@
+
+header{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin-left: 35rem;
+
+}
+a:link {
+            text-decoration: none;
+            /*color: white;*/
+        }
+
+div.top_lan{
+    text-align: center;
+}
+
+body div p1{
+
+    font-weight: bold;
+    color: #131312;
+    text-align: center;
+}
+
+body{
+    background: greenyellow;
+    text-align: left;
+    font-size: 21px;
+
+}
+div.con{
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #1b4106;
+    width: 50%;
+
+}
+div.main{
+    display: flex;
+    flex-direction: row;
+}
+div.left{
+    text-align: center;
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: #1b4106;
+    width: 24%;
+
+
+}
+div div.contact{
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 3px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.about_me{
+
+    border-style: dashed;
+    border-radius: 20px;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.certificate{
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+div.project{
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.work{
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+div.language{
+    border-radius: 20px;
+    border-style: dashed;
+    padding-top: 20px;
+    border-width: 3px;
+    border-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+.con{
+    background: #f1ecec;
+    border-radius: 20px;
+    margin-left: 18rem;
+
+}
+div p2.me{
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
+    background: #dae8a2;
+}
+
+.bbb{
+    /*background: blue;*/
+     font-weight: bold;
+}
+button{
+
+    border-radius: 5px;
+    background: green;
+    font-size: 25px;
+}
+
+footer{
+    text-align: center;
+}
+
+table, th, td {
+  /*border: 1px solid;*/
+}
+
+div{
+    padding-top: 20px;
+}
+div div p1.line{
+    color: black;
+}
