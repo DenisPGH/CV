@@ -1,2 +1,2 @@
-web: gunicorn --pythonpath denislav denis.wsgi
+web: gunicorn --pythonpath CV denislav denis.wsgi
 release: python manage.py migrate
