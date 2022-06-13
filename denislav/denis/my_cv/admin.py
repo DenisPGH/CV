@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from denis.my_cv.models import Certificate,Denislav,Language,Project,ContactData,Work
+from denis.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work, Head
 
 
 @admin.register(Certificate)
@@ -62,4 +62,9 @@ class TaskWork(admin.ModelAdmin):
     'position_de',
     'employer_de' ,
     'description_de'
+    )
+
+@admin.register(Head)
+class TaskHead(admin.ModelAdmin):
+    list_display = ('head_en','head_de'
     )

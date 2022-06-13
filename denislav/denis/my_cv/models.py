@@ -79,3 +79,10 @@ class Work(models.Model):
     position_de = models.CharField(max_length=POSITION_MAX_LENGHT)
     employer_de = models.CharField(max_length=TITLE_MAX_LENGHT)
     description_de = models.TextField()
+
+
+
+class Head(models.Model):
+    HEAD_MAX_LENGHT=200
+    head_en=models.CharField(max_length=HEAD_MAX_LENGHT)
+    head_de=models.CharField(max_length=HEAD_MAX_LENGHT)

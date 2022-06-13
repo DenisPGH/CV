@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import generic as views
 
 # Create your views here.
-from denis.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work
+from denis.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work, Head
 
 
 class MainPage(views.TemplateView):
@@ -15,6 +15,7 @@ class MainPage(views.TemplateView):
         projects = Project.objects.all()
         works = Work.objects.all()
         denislav = Denislav.objects.first()
+        head = Head.objects.first()
         mode=Denislav.objects.first().mode
 
         context['certificats']=certificats
@@ -24,6 +25,7 @@ class MainPage(views.TemplateView):
         context['works']=works
         context['denislav']=denislav
         context['mode']=mode
+        context['head']=head
         context['line']="="*25
         return context
 
