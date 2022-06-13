@@ -11,6 +11,7 @@ SECRET_KEY= os.getenv('SECRET_KEY','SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     os.getenv('WEB','WEB'),
     os.getenv('WEB_m','WEB_m'),
 ]
@@ -25,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'denis.my_cv'
+    'denislav.my_cv'
 ]
 
 MIDDLEWARE = [
@@ -38,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'denis.urls'
+ROOT_URLCONF = 'denislav.urls'
 
 TEMPLATES = [
     {
@@ -57,7 +58,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'denis.wsgi.application'
+WSGI_APPLICATION = 'denislav.wsgi.application'
 
 
 # Database
@@ -72,10 +73,7 @@ DATABASES = {
         'USER': os.getenv('DB_USER','denis_postgre') ,
         'PASSWORD': os.getenv('DB_PASSWORD','D_12-K9'),
             },
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+
 }
 
 

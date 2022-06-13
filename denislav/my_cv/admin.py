@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from denis.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work, Head
+from denislav.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work, Head
 
 
 @admin.register(Certificate)

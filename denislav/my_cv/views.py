@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from django.views import generic as views
 
 # Create your views here.
-from denis.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work, Head
+from denislav.my_cv.models import Certificate, Denislav, Language, Project, ContactData, Work, Head
 
 
 class MainPage(views.TemplateView):

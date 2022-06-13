@@ -1,7 +1,7 @@
 
 from django.urls import path
 
-from denis.my_cv.views import MainPage, en_mode, de_mode
+from denislav.my_cv.views import MainPage, en_mode, de_mode
 
 urlpatterns = [
     path('',MainPage.as_view(),name='index'),
