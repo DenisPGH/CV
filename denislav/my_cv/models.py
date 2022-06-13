@@ -2,13 +2,13 @@ from django.db import models
 
 # Create your models here.
 class Certificate(models.Model):
-    CERTIFICATE_MAX_LENGHT=50
+    CERTIFICATE_MAX_LENGHT=100
     name_en=models.CharField(max_length=CERTIFICATE_MAX_LENGHT)
     name_de=models.CharField(max_length=CERTIFICATE_MAX_LENGHT)
 
 
 class Language(models.Model):
-    LANGUAGE_MAX_LENGHT = 20
+    LANGUAGE_MAX_LENGHT = 50
     language_en=models.CharField(max_length=LANGUAGE_MAX_LENGHT)
     level_en=models.CharField( max_length=LANGUAGE_MAX_LENGHT)
 
@@ -19,7 +19,7 @@ class Language(models.Model):
 
 
 class ContactData(models.Model):
-    PHONE_MAX_LENGHT=20
+    PHONE_MAX_LENGHT=50
     git_hub=models.URLField()
     linked_in=models.URLField()
     phone=models.CharField( max_length=PHONE_MAX_LENGHT)
@@ -47,9 +47,9 @@ class Denislav(models.Model):
 
 
 class Project(models.Model):
-    DURATION_MAX_LENGHT=50
-    TITLE_MAX_LENGHT=50
-    USED_MAX_LENGHT=50
+    DURATION_MAX_LENGHT=70
+    TITLE_MAX_LENGHT=70
+    USED_MAX_LENGHT=200
 
     title_en=models.CharField(max_length=TITLE_MAX_LENGHT)
     duration_en=models.CharField(max_length=DURATION_MAX_LENGHT)
@@ -67,7 +67,7 @@ class Project(models.Model):
 class Work(models.Model):
     DURATION_MAX_LENGHT = 50
     TITLE_MAX_LENGHT = 50
-    POSITION_MAX_LENGHT = 50
+    POSITION_MAX_LENGHT = 70
 
     from_date = models.DateField()
     to_date = models.DateField()
@@ -83,6 +83,6 @@ class Work(models.Model):
 
 
 class Head(models.Model):
-    HEAD_MAX_LENGHT=200
+    HEAD_MAX_LENGHT=300
     head_en=models.CharField(max_length=HEAD_MAX_LENGHT)
     head_de=models.CharField(max_length=HEAD_MAX_LENGHT)
