@@ -177,7 +177,7 @@
 
     {% else %}
         <p1> ARBEITSERFAHRUNG:</p1>
-         {%  for each in work %}
+         {%  for each in works %}
              <span><p2 class="bbb"> Beruf oder Funktion: </p2><p2>{{ each.position_de }}</p2></span>
             <span><p2 class="bbb"> Datum (von-bis) : </p2><p2>{{ each.from_date }} - {{ each.to_date }}</p2></span>
             <span><p2 class="bbb"> Beschreibung:  </p2><p2>{{ each.description_de }}</p2></span>
