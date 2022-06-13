@@ -12,7 +12,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    os.getenv('WEB','WEB'),
+
+    f"{os.getenv('WEB','WEB')}",
     os.getenv('WEB_m','WEB_m'),
 ]
 
